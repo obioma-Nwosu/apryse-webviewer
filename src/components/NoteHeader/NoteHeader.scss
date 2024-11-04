@@ -1,0 +1,125 @@
+@import '../../constants/styles';
+@import '../../constants/note';
+
+.NoteHeader {
+  padding-right: 12px;
+  position: relative;
+  flex: 1;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+
+  @include ie11 {
+    flex: none;
+  }
+
+  .type-icon {
+    margin: 2px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .type-icon-container {
+    padding-right: 13px;
+
+    .unread-notification {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      right: -2px;
+      top: -2px;
+      border-radius: 10000px;
+      border: 2px solid var(--component-background);
+      background: $pdftron-blue;
+    }
+  }
+
+  .author-and-date {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    flex-direction: column;
+
+    &.isReply {
+      padding-left: 0px;
+      padding-top: 0px;
+      font-size: 10px;
+    }
+
+    .author-and-overflow {
+      display: flex;
+      justify-content: space-between;
+
+      .author-and-time {
+        display: flex;
+        flex-direction: column;
+        word-break: break-word;
+
+        .author {
+          font-weight: bold;
+        }
+
+        .date-and-num-replies {
+          display: flex;
+
+          .date-and-time {
+            opacity: 0.8;
+            font-size: 10px;
+
+            @include mobile {
+              font-size: 12px;
+            }
+
+            color: var(--faded-text);
+          }
+
+          .num-replies-container {
+            display: flex;
+            flex-grow: 1;
+            padding-left: 10px;
+
+            .num-reply-icon {
+              height: 12px;
+              width: 12px;
+            }
+
+            .num-replies {
+              opacity: 0.8;
+              font-size: 10px;
+
+              @include mobile {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      .state-and-overflow {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+
+        .tracked-change-icon-wrapper {
+          margin-left: 8px;
+          cursor: pointer;
+
+          .tracked-change-icon {
+            margin: 2px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .author-name {
+    font-weight: bold;
+  }
+}
+
+.parent {
+  padding-left: 12px;
+  padding-top: 12px;
+}

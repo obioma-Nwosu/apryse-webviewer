@@ -1,0 +1,31 @@
+@import '../../constants/light';
+
+.NoteButtonArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px 12px;
+
+  button {
+    border: none;
+    padding: 10px;
+    background-color: var(--button-color, blue);
+    color: var(--component-background);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1 0 calc(50% - 2.5px);
+
+    &:hover {
+      background-color: var(--primary-button-hover);
+    }
+  }
+
+  & > button:only-child {
+    flex: 1 0 100%;
+  }
+
+  & > button:nth-last-child(1):nth-child(odd) {
+    flex: 1 0 100%;
+  }
+}

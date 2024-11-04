@@ -1,0 +1,37 @@
+@import '../../constants/styles';
+@import '../../constants/panel';
+
+.fileAttachmentPanel {
+  @extend %panel;
+  display: block;
+  font-size: var(--font-size-default);
+
+  .section{
+    margin-bottom: 10px;
+    p.title{
+      margin-left:16px;
+    }
+    ul.downloadable{
+      &>li{
+        cursor: pointer;
+        color: var(--secondary-button-text);
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;text-overflow: ellipsis;
+      }
+      .embedSpinner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .spinner {
+          margin: 0px;
+        }
+      }
+    }
+    ul ul{
+      padding-left: 10px;
+      list-style-type:none;
+    }
+  }
+}

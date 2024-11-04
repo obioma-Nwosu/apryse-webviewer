@@ -1,0 +1,10 @@
+.NoteStatusTagArea {
+  display: inline-block;
+  padding: 0 16px;
+  margin: 3px 45px;
+  background-color: var(--tag-background-color);
+  color: var(--tag-text-color);
+  border-radius: 5px;
+  opacity: 1;
+  align-self: flex-start;
+}
